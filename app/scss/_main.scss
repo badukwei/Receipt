@@ -1,0 +1,337 @@
+body {
+    position: relative;
+
+    .topbar {
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background: $white;
+    margin-top: -30px;
+    padding: 1.625rem;
+    border-radius: 5px;
+    box-shadow: $desaturatedDarkCyan 0px 11px 25px -10px;  
+    text-align: center;
+    font-size: $font-med;
+    font-weight: 500;
+    color: veryDarkGrayish;
+}
+
+.container {
+    display: block;
+    margin: 100px auto;
+
+    .item {
+        display: block;
+        position: relative;
+        width: 70%;
+        background: $white;
+        margin: 20px auto;
+        padding: 1.625rem;
+        border-radius: 5px;
+        box-shadow: $desaturatedDarkCyan 0px 8px 15px -10px;  
+        
+        .infoWrap {
+            display: table;
+            width: 100%;
+
+            .info {
+                display: table-cell;
+                vertical-align: middle;    
+                
+                .itemNumber {
+                    display: block;
+                    margin-top: 0px;
+                    margin-left: 6px;
+                    margin-bottom: 0px;
+                    font-size: $font-sm;
+                    font-weight: 100;
+                    opacity: 0.5;
+                }
+            
+                .itemName {
+                    display: block;
+                    margin-top: 0px;
+                    margin-left: 6px;
+                    margin-bottom: 0px;
+                    font-size: 28px;
+                    color: $desaturatedDarkCyan;
+                    
+                }
+            
+
+                
+           
+            }
+
+            .total-price {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                font-size: $font-med;
+                position: absolute;
+                right: 48px;
+
+                .inputs {
+                    display: inline-block;
+                    margin: 0px;
+                    font-size: $font-med;
+                    vertical-align: middle;
+                    margin-bottom: -36px;
+                    
+            
+                    .amount {
+                        
+                        width: 22px;
+                        text-align: center;
+                        font-size: $font-med;
+                        font-weight: 400;
+                        border: none;
+                    
+                    }
+            
+                    .price {
+                        width: 54px;
+                        text-align: center;
+                        font-size: $font-med;
+                        font-weight: 400;
+                        border: none;
+                    }
+
+                    span {
+                        font-size: $font-med;
+                    }
+                }
+            }
+
+            .removeWrap {
+                display: table-cell;
+                vertical-align: middle;
+                position: absolute;
+                right: 16px;
+                top: 16px;
+
+                .delete {
+                    text-decoration: none;
+                    font-family: "Montserrat", sans-serif;
+                    color: #ffffff;
+                    font-weight: bold;
+                    background: #e0e0e0;
+                    padding: 0.5em;
+                    font-size: .75em;
+                    display: inline-block;
+                    border-radius: 100%;
+                    line-height: .85;
+                    border: none;
+                }
+            }
+
+
+        }
+    }
+
+    .inner-footer {
+        display: block;
+        position: relative;
+        width: 70%;
+        background: $white;
+        margin: 20px auto;
+        padding: 1.625rem;
+        border-radius: 5px;
+        box-shadow: $desaturatedDarkCyan 0px 8px 15px -10px;
+    }
+
+}
+
+    .topbar {
+        position: absolute;
+        width: calc(100% - 3rem);
+        left: 50%;
+        transform: translateX(-50%);
+        background: $white;
+        margin-top: -30px;
+        padding: 1.625rem;
+        border-radius: 5px;
+        box-shadow: $desaturatedDarkCyan 0px 11px 25px -10px;  
+        text-align: center;
+        font-size: $font-med;
+        font-weight: 500;
+        color: veryDarkGrayish;
+    }
+    
+    .container {
+        display: block;
+        margin: 100px auto;
+    
+        .item {
+            display: block;
+            position: relative;
+            width: 70%;
+            background: $white;
+            margin: 20px auto;
+            padding: 1.625rem;
+            border-radius: 5px;
+            box-shadow: $desaturatedDarkCyan 0px 8px 15px -10px;  
+            
+            .infoWrap {
+                display: table;
+                width: 100%;
+    
+                .info {
+                    display: table-cell;
+                    vertical-align: middle;    
+                    
+                    .itemNumber {
+                        display: block;
+                        margin-top: 0px;
+                        margin-left: 6px;
+                        margin-bottom: 0px;
+                        font-size: $font-sm;
+                        font-weight: 100;
+                        opacity: 0.5;
+                    }
+                
+                    .itemName {
+                        display: block;
+                        margin-top: 0px;
+                        margin-left: 6px;
+                        margin-bottom: 0px;
+                        font-size: 28px;
+                        color: $desaturatedDarkCyan;
+                        
+                    }
+                
+    
+                    
+               
+                }
+    
+                .total-price {
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                    font-size: $font-med;
+                    position: absolute;
+                    right: 48px;
+    
+                    .inputs {
+                        display: inline-block;
+
+                        margin: 0px;
+                        font-size: $font-sm;
+                        vertical-align: middle;
+                        margin-bottom: -36px;
+                        
+                
+                        .amount {
+                            
+                            width: 16px;
+                            text-align: center;
+                            font-size: $font-sm;
+                            font-weight: 400;
+                            border: none;
+                        
+                        }
+                
+                        .price {
+                            width: 32px;
+                            text-align: center;
+                            font-size: $font-sm;
+                            font-weight: 400;
+                            border: none;
+                        }
+    
+                        span {
+                            font-size: $font-sm;
+                        }
+                    }
+                }
+    
+                .removeWrap {
+                    display: table-cell;
+                    vertical-align: middle;
+                    position: absolute;
+                    right: 16px;
+                    top: 16px;
+    
+                    .delete {
+                        text-decoration: none;
+                        font-family: "Montserrat", sans-serif;
+                        color: #ffffff;
+                        font-weight: bold;
+                        background: #e0e0e0;
+                        padding: 0.5em;
+                        font-size: .75em;
+                        display: inline-block;
+                        border-radius: 100%;
+                        line-height: .85;
+                        border: none;
+                    }
+                }
+    
+    
+            }
+        }
+    
+        .inner-footer {
+            display: block;
+            position: relative;
+            width: 70%;
+            background: $white;
+            margin: 20px auto;
+            padding: 1.625rem;
+            border-radius: 5px;
+            box-shadow: $desaturatedDarkCyan 0px 8px 15px -10px;
+
+
+            .footerWrap {
+                background: $desaturatedDarkCyan;
+                border-radius: inherit;
+                text-align: center;
+
+                .footerTitle {
+                    display: inline-block;
+                    margin-right: 40px;
+
+                    ul {
+                        display: block;
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 30px 0px;
+
+                        li {
+                            margin: 10px auto;
+                            text-align: center;  
+                            color: $white;                 
+                        }
+                    }
+
+ 
+                }
+
+                .footerNumbers {
+                    display: inline-block;
+
+                    ul {
+                        display: block;
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 30px 0px;
+
+                        li {
+                            margin: 10px auto;
+                            text-align: center;  
+                            color: $white;                 
+                        }
+                    }
+                }
+
+           
+            }
+        }
+    
+    }
+}
+
+
+

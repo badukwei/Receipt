@@ -1,0 +1,299 @@
+html {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: hsl(180deg, 52%, 96%);
+  font-family: "Public Sans", sans-serif;
+}
+
+header img {
+  position: relative;
+  width: 100%;
+  background-color: hsl(180deg, 29%, 50%);
+  font-family: "Public Sans", sans-serif;
+}
+
+body {
+  position: relative;
+}
+body .topbar {
+  position: absolute;
+  width: calc(100% - 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: hsl(0deg, 0%, 100%);
+  margin-top: -30px;
+  padding: 1.625rem;
+  border-radius: 5px;
+  box-shadow: hsl(180deg, 29%, 50%) 0px 11px 25px -10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: veryDarkGrayish;
+}
+body .container {
+  display: block;
+  margin: 100px auto;
+}
+body .container .item {
+  display: block;
+  position: relative;
+  width: 70%;
+  background: hsl(0deg, 0%, 100%);
+  margin: 20px auto;
+  padding: 1.625rem;
+  border-radius: 5px;
+  box-shadow: hsl(180deg, 29%, 50%) 0px 8px 15px -10px;
+}
+body .container .item .infoWrap {
+  display: table;
+  width: 100%;
+}
+body .container .item .infoWrap .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+body .container .item .infoWrap .info .itemNumber {
+  display: block;
+  margin-top: 0px;
+  margin-left: 6px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 100;
+  opacity: 0.5;
+}
+body .container .item .infoWrap .info .itemName {
+  display: block;
+  margin-top: 0px;
+  margin-left: 6px;
+  margin-bottom: 0px;
+  font-size: 28px;
+  color: hsl(180deg, 29%, 50%);
+}
+body .container .item .infoWrap .total-price {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24px;
+  position: absolute;
+  right: 48px;
+}
+body .container .item .infoWrap .total-price .inputs {
+  display: inline-block;
+  margin: 0px;
+  font-size: 24px;
+  vertical-align: middle;
+  margin-bottom: -36px;
+}
+body .container .item .infoWrap .total-price .inputs .amount {
+  width: 22px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  border: none;
+}
+body .container .item .infoWrap .total-price .inputs .price {
+  width: 54px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  border: none;
+}
+body .container .item .infoWrap .total-price .inputs span {
+  font-size: 24px;
+}
+body .container .item .infoWrap .removeWrap {
+  display: table-cell;
+  vertical-align: middle;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+body .container .item .infoWrap .removeWrap .delete {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  background: #e0e0e0;
+  padding: 0.5em;
+  font-size: 0.75em;
+  display: inline-block;
+  border-radius: 100%;
+  line-height: 0.85;
+  border: none;
+}
+body .container .inner-footer {
+  display: block;
+  position: relative;
+  width: 70%;
+  background: hsl(0deg, 0%, 100%);
+  margin: 20px auto;
+  padding: 1.625rem;
+  border-radius: 5px;
+  box-shadow: hsl(180deg, 29%, 50%) 0px 8px 15px -10px;
+}
+body .topbar {
+  position: absolute;
+  width: calc(100% - 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: hsl(0deg, 0%, 100%);
+  margin-top: -30px;
+  padding: 1.625rem;
+  border-radius: 5px;
+  box-shadow: hsl(180deg, 29%, 50%) 0px 11px 25px -10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: veryDarkGrayish;
+}
+body .container {
+  display: block;
+  margin: 100px auto;
+}
+body .container .item {
+  display: block;
+  position: relative;
+  width: 70%;
+  background: hsl(0deg, 0%, 100%);
+  margin: 20px auto;
+  padding: 1.625rem;
+  border-radius: 5px;
+  box-shadow: hsl(180deg, 29%, 50%) 0px 8px 15px -10px;
+}
+body .container .item .infoWrap {
+  display: table;
+  width: 100%;
+}
+body .container .item .infoWrap .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+body .container .item .infoWrap .info .itemNumber {
+  display: block;
+  margin-top: 0px;
+  margin-left: 6px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 100;
+  opacity: 0.5;
+}
+body .container .item .infoWrap .info .itemName {
+  display: block;
+  margin-top: 0px;
+  margin-left: 6px;
+  margin-bottom: 0px;
+  font-size: 28px;
+  color: hsl(180deg, 29%, 50%);
+}
+body .container .item .infoWrap .total-price {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24px;
+  position: absolute;
+  right: 48px;
+}
+body .container .item .infoWrap .total-price .inputs {
+  display: inline-block;
+  margin: 0px;
+  font-size: 16px;
+  vertical-align: middle;
+  margin-bottom: -36px;
+}
+body .container .item .infoWrap .total-price .inputs .amount {
+  width: 16px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+}
+body .container .item .infoWrap .total-price .inputs .price {
+  width: 32px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+}
+body .container .item .infoWrap .total-price .inputs span {
+  font-size: 16px;
+}
+body .container .item .infoWrap .removeWrap {
+  display: table-cell;
+  vertical-align: middle;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+body .container .item .infoWrap .removeWrap .delete {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  background: #e0e0e0;
+  padding: 0.5em;
+  font-size: 0.75em;
+  display: inline-block;
+  border-radius: 100%;
+  line-height: 0.85;
+  border: none;
+}
+body .container .inner-footer {
+  display: block;
+  position: relative;
+  width: 70%;
+  background: hsl(0deg, 0%, 100%);
+  margin: 20px auto;
+  padding: 1.625rem;
+  border-radius: 5px;
+  box-shadow: hsl(180deg, 29%, 50%) 0px 8px 15px -10px;
+}
+body .container .inner-footer .footerWrap {
+  background: hsl(180deg, 29%, 50%);
+  border-radius: inherit;
+  text-align: center;
+}
+body .container .inner-footer .footerWrap .footerTitle {
+  display: inline-block;
+  margin-right: 40px;
+}
+body .container .inner-footer .footerWrap .footerTitle ul {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 30px 0px;
+}
+body .container .inner-footer .footerWrap .footerTitle ul li {
+  margin: 10px auto;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+}
+body .container .inner-footer .footerWrap .footerNumbers {
+  display: inline-block;
+}
+body .container .inner-footer .footerWrap .footerNumbers ul {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 30px 0px;
+}
+body .container .inner-footer .footerWrap .footerNumbers ul li {
+  margin: 10px auto;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+}
+
+footer img {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  background-color: hsl(180deg, 29%, 50%);
+}/*# sourceMappingURL=style.css.map */
