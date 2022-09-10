@@ -25,20 +25,56 @@
   </header>
   <div class="topbar">My Receipt</div>
   <div class="container">
-    <div class="item">
-      <div class="infoWrap">
-        <div class="info">
-          <p class="itemNumber">#1231123</p>
-          <h1 class="itemName">Item 1</h1>
+    <h3 class="add-header">Add items</h3>
+    <div id="add-items" class="item">
+      <div class="add-container">
+        <div class="add-info">
+          <div class="input-number">
+            <div class="styled-input">
+              <input id="new-id" type="text" required />
+              <label>Number</label> 
+            </div>
+          </div>
+          <div class="input-name">
+            <div class="styled-input">
+              <input id="new-name" type="text" required />
+              <label>Item Name</label> 
+            </div>
+          </div>
         </div>
-        <div class="total-price">
-          <p class="inputs"><input class="amount" type="text" placeholder="2"> x <input class="price" type="text" placeholder="100"> = $<span class="priceOutput">200</span></p>
+        <div class="input-price">
+          <div class="amount">
+            <div class="styled-input">
+              <input id="new-amount" type="text" required />
+              <label>Amout</label> 
+            </div>
+          </div>
+          <div class="price">
+            <div class="styled-input">
+              <input id="new-price" type="text" required />
+              <label>Price</label> 
+            </div>
+          </div>
         </div>
-        <div class="removeWrap">
-          <button id="deleteButton" class="delete">x</button>
+        <button class="styled-input add-button click-button">Add</button>
+      </div>
+    </div>
+    <h3 class="item-header">Items</h3>
+    <div id="itemWrap">
+      <div class="item">
+        <div class="infoWrap">
+          <div class="info">
+            <p class="itemNumber">#1231123</p>
+            <h1 class="itemName">Item 1</h1>
+          </div>
+          <p class="total-price">$<span class="priceOutput">200</span></p>
+          <div class="removeWrap">
+            <label id="deleteButton" class="delete click-button">x</label>
+          </div>
         </div>
       </div>
     </div>
+    <!--
     <div class="item">
       <div class="infoWrap">
         <div class="info">
@@ -49,7 +85,7 @@
           <p class="inputs"><input class="amount" type="text" placeholder="2"> x <input class="price" type="text" placeholder="100"> = $<span class="priceOutput">200</span></p>
         </div>
         <div class="removeWrap">
-          <button id="deleteButton" class="delete">x</button>
+          <a href="" id="deleteButton" class="delete">x</a>
         </div>
       </div>
     </div>
@@ -63,7 +99,7 @@
           <p class="inputs"><input class="amount" type="text" placeholder="2"> x <input class="price" type="text" placeholder="100"> = $<span class="priceOutput">200</span></p>
         </div>
         <div class="removeWrap">
-          <button id="deleteButton" class="delete">x</button>
+          <a href="" id="deleteButton" class="delete">x</a>
         </div>
       </div>
     </div>
@@ -77,10 +113,12 @@
           <p class="inputs"><input class="amount" type="text" placeholder="2"> x <input class="price" type="text" placeholder="100"> = $<span class="priceOutput">200</span></p>
         </div>
         <div class="removeWrap">
-          <button id="deleteButton" class="delete">x</button>
+          <a href="" id="deleteButton" class="delete">x</a>
         </div>
       </div>
     </div>
+    -->
+    <h3>Total</h3>
     <div class="inner-footer">
       <div class="footerWrap">
         <div class="footerTitle">
@@ -100,17 +138,8 @@
       </div>
     </div>
   </div>
-  <!--<footer>
-    <img src="resource/images/bg-header-desktop.svg" alt="header-img-desktop">
-  </footer>-->
 
-  
-  <!--
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-  -->
+
   <script src="app/js/script.js"></script> 
 </body>
 </html>

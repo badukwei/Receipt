@@ -14,3 +14,11 @@ body {
     font-family: 'Public Sans', sans-serif;
 }
 
+.click-button {
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.5;
+        transition: all 0.4s ease;
+    }    
+}

@@ -1,9 +1,51 @@
-footer {
+.inner-footer {
+    background: $white;
+    margin: 20px auto;
+    padding: 1.625rem;
+    border-radius: 5px;
+    box-shadow: $desaturatedDarkCyan 0px 8px 15px -10px;
 
-    img {
-        position: absolute;
-        width: 100%;
-        bottom: 0px;
-        background-color: $desaturatedDarkCyan;
-    }        
+
+    .footerWrap {
+        background: $desaturatedDarkCyan;
+        border-radius: inherit;
+        text-align: center;
+
+        .footerTitle {
+            display: inline-block;
+            margin-right: 40px;
+
+            ul {
+                display: block;
+                list-style-type: none;
+                margin: 0;
+                padding: 30px 0px;
+
+                li {
+                    margin: 10px auto;
+                    text-align: center;  
+                    color: $white;                 
+                }
+            }
+
+
+        }
+
+        .footerNumbers {
+            display: inline-block;
+
+            ul {
+                display: block;
+                list-style-type: none;
+                margin: 0;
+                padding: 30px 0px;
+
+                li {
+                    margin: 10px auto;
+                    text-align: center;  
+                    color: $white;                 
+                }
+            }
+        }   
+    }
 }
