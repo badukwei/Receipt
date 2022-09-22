@@ -1,12 +1,12 @@
 //To do : animation of removing and price change
 //Bug : if I don't put the item name price will cover the remove bottun
 //To fix : 自動進位
-//To fix : defaults of input
+//To fix : defaults of input 
 
-let idInput = document.getElementById("new-id");
-let nameInput = document.getElementById("new-name");
-let amountInput = document.getElementById("new-amount");
-let priceInput = document.getElementById("new-price");
+let idInput = document.getElementById("newId");
+let nameInput = document.getElementById("newName");
+let amountInput = document.getElementById("newAmount");
+let priceInput = document.getElementById("newPrice");
 let addButton = document.getElementsByTagName("button")[0];
 let itemsHolder = document.getElementById("itemWrap");
 //Total Price and Tips
@@ -14,7 +14,7 @@ let subTotal = document.getElementById('subTotal');
 let tips = document.getElementById('tips');
 let total = document.getElementById('total');
 
-const createNewItemElement = function(number, name, amout, price) {
+const createNewItemElement = function(number, name, amount, price) {
   //create a listitem
   let item = document.createElement("div");
   //itemNumber & itemName & itemPrice & itemAmount
@@ -24,8 +24,8 @@ const createNewItemElement = function(number, name, amout, price) {
   //itemNumber
   let itemNumber = document.createElement("p"); 
   //itemName
-  let itemName = document.createElement("h1");
-  //total-price
+  let itemName = document.createElement("h3");
+  //totalPrice
   let totalPrice = document.createElement("p");
   //priceOutput
   let priceOutput = document.createElement("span");
@@ -36,20 +36,20 @@ const createNewItemElement = function(number, name, amout, price) {
 
   //classname
   item.className="item"
-  infoWrap.className = "infoWrap";
+  infoWrap.className = "info-wrap";
   info.className = "info";
-  itemNumber.className = "itemNumber";
-  itemName.className = "itemName";
+  itemNumber.className = "item-number";
+  itemName.className = "item-name";
   totalPrice.className = "total-price";
-  priceOutput.className = "priceOutput";
-  removeWrap.className = "removeWrap";
+  priceOutput.className = "price-output";
+  removeWrap.className = "remove-wrap";
   deleteButton.classList.add("delete", "click-button");
  
 
   //innertext
-  itemNumber.innerText = number;
+  itemNumber.innerText = "#" + number;
   itemName.innerText = name;
-  priceOutput.innerText = parseFloat(amout) * parseFloat(price);
+  priceOutput.innerText = parseFloat(amount) * parseFloat(price);
   totalPrice.innerText = "$";
   deleteButton.innerText = "x";
 
@@ -76,14 +76,11 @@ const addItem = function() {
   itemsHolder.appendChild(listItem); 
   bindItemEvents(listItem);
   listItem.classList.add("fade-in");
-  //subTotal.classList.add("fade-in");
-  //tips.classList.add("fade-in");
-  //total.classList.add("fade-in");
   setTimeout(() => {
     countPrice();
   }, 500);
  
-  //defaults?
+  //defaults
   idInput.value = "";   
   nameInput.value = "";
   amountInput.value = "";
@@ -109,7 +106,7 @@ let bindItemEvents = function(listItem) {
   console.log("Bind list item events");
   //select listItem's children
   let deleteButton = listItem.querySelector(".delete");
-  let price = listItem.querySelector(".priceOutput").innerText;
+  let price = listItem.querySelector(".price-output").innerText;
   console.log(price);
   //bind deleteItem to delete button
   deleteButton.onclick = deleteItem;
@@ -124,7 +121,7 @@ for(let i = 0; i < itemsHolder.children.length; i++) {
 let countPrice = function() {
   console.log('Counting the price');
   subTotal.innerHTML = 0;
-  let priceOutputSum = itemsHolder.querySelectorAll('.priceOutput');
+  let priceOutputSum = itemsHolder.querySelectorAll('.price-output');
   for(let i = 0; i < priceOutputSum.length; i++) {
       subTotal.innerHTML = (parseFloat(priceOutputSum[i].innerHTML) + parseFloat(subTotal.innerHTML)).toFixed(2)
   }

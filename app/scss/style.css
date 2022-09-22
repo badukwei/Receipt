@@ -22,8 +22,14 @@ body {
   transition: all 0.4s ease;
 }
 
+h2 {
+  color: hsl(180deg, 29%, 50%);
+  margin: 0px 0px -5px 2px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
 header img {
-  position: relative;
   width: 100%;
   background-color: hsl(180deg, 29%, 50%);
   font-family: "Public Sans", sans-serif;
@@ -44,16 +50,15 @@ body .topbar {
   box-shadow: hsl(180deg, 29%, 50%) 0px 11px 25px -10px;
   text-align: center;
   font-size: 24px;
-  font-weight: 500;
-  color: veryDarkGrayish;
+  font-weight: 700;
+  color: hsl(180deg, 14%, 20%);
 }
-body .container {
-  display: block;
+
+.container {
   margin: 100px auto;
   width: 70%;
 }
-body .container .item {
-  display: block;
+.container .item {
   position: relative;
   background: hsl(0deg, 0%, 100%);
   margin: 20px auto;
@@ -61,15 +66,11 @@ body .container .item {
   border-radius: 5px;
   box-shadow: hsl(180deg, 29%, 50%) 0px 8px 15px -10px;
 }
-body .container .item .infoWrap {
+.container .item .info-wrap {
   display: flex;
   justify-content: space-between;
 }
-body .container .item .infoWrap .info {
-  vertical-align: middle;
-}
-body .container .item .infoWrap .info .itemNumber {
-  display: block;
+.container .item .info-wrap .info .item-number {
   margin-top: 0px;
   margin-left: 6px;
   margin-bottom: 0px;
@@ -77,78 +78,72 @@ body .container .item .infoWrap .info .itemNumber {
   font-weight: 100;
   opacity: 0.5;
 }
-body .container .item .infoWrap .info .itemName {
-  display: block;
+.container .item .info-wrap .info .item-name {
   margin-top: 0px;
   margin-left: 6px;
   margin-bottom: 0px;
   font-size: 28px;
+  font-weight: 500;
   color: hsl(180deg, 29%, 50%);
 }
-body .container .item .infoWrap .total-price {
-  vertical-align: middle;
-  text-align: center;
+.container .item .info-wrap .total-price {
   font-size: 16px;
   position: absolute;
   right: 16px;
   bottom: 0px;
 }
-body .container .item .infoWrap .removeWrap {
-  vertical-align: middle;
+.container .item .info-wrap .remove-wrap {
+  margin-top: -2px;
 }
-body .container .item .infoWrap .removeWrap .delete {
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  color: #ffffff;
+.container .item .info-wrap .remove-wrap .delete {
+  color: hsl(180deg, 52%, 96%);
   font-weight: bold;
   background: hsl(233deg, 8%, 62%);
-  padding: 0.5em 0.7em;
+  padding: 0.5em 0.58em 0.58em;
   font-size: 0.75em;
   border-radius: 100%;
-  line-height: 0.8;
+  line-height: 0.7;
   border: none;
 }
 
-.inner-footer {
+.footer {
   background: hsl(0deg, 0%, 100%);
   margin: 20px auto;
   padding: 1.625rem;
   border-radius: 5px;
   box-shadow: hsl(180deg, 29%, 50%) 0px 8px 15px -10px;
 }
-.inner-footer .footerWrap {
-  background: hsl(180deg, 29%, 50%);
+.footer-wrap {
+  background: hsl(220deg, 16%, 96%);
   border-radius: inherit;
-  text-align: center;
+  border-left: solid hsl(233deg, 8%, 62%);
+  display: flex;
+  justify-content: center;
 }
-.inner-footer .footerWrap .footerTitle {
-  display: inline-block;
-  margin-right: 40px;
+.footer-wrap-title {
+  margin-right: 20px;
 }
-.inner-footer .footerWrap .footerTitle ul {
+.footer-wrap-title ul {
   display: block;
   list-style-type: none;
   margin: 0;
   padding: 30px 0px;
 }
-.inner-footer .footerWrap .footerTitle ul li {
+.footer-wrap-title ul li {
   margin: 10px auto;
   text-align: center;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(180deg, 14%, 20%);
 }
-.inner-footer .footerWrap .footerNumbers {
-  display: inline-block;
-}
-.inner-footer .footerWrap .footerNumbers ul {
+.footer-wrap-numbers ul {
   display: block;
   list-style-type: none;
   margin: 0;
   padding: 30px 0px;
 }
-.inner-footer .footerWrap .footerNumbers ul li {
+.footer-wrap-numbers ul li {
   margin: 10px auto;
   text-align: center;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(180deg, 14%, 20%);
 }
 
 input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
@@ -163,20 +158,21 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 }
 
 .add-container {
-  display: flex;
   justify-content: center;
+  padding-top: 10px;
 }
 .add-container .styled-input {
-  margin: 20px 10px;
+  margin: 20px 0px 0px 0px;
+  padding: 0px 10px;
   position: relative;
   border-radius: 4px;
 }
 .add-container .styled-input label {
-  color: hsl(180deg, 52%, 96%);
+  color: hsl(233deg, 8%, 62%);
   padding: 1.3rem 30px 1rem 30px;
   position: absolute;
   top: 0px;
-  left: -16px;
+  left: -5px;
   transition: all 0.25s ease;
   pointer-events: none;
 }
@@ -184,13 +180,14 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
   text-align: center;
   padding: 20px;
   border: 0;
+  border-left: solid hsl(233deg, 8%, 62%);
   font-size: 1rem;
-  background-color: hsl(180deg, 29%, 50%);
-  color: hsl(180deg, 52%, 96%);
+  background-color: hsl(220deg, 16%, 96%);
+  color: hsl(180deg, 14%, 20%);
   border-radius: 4px;
+  width: 100%;
 }
-.add-container .styled-input input:focus,
-.add-container .styled-input textarea:focus {
+.add-container .styled-input input:focus {
   outline: 0;
 }
 .add-container .add-button {
@@ -198,7 +195,14 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
   color: hsl(180deg, 52%, 96%);
   background-color: hsl(233deg, 8%, 62%);
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  padding: 3px;
+  width: 20%;
+  margin-bottom: 10px;
+}
+
+.has-fade {
+  visibility: hidden;
 }
 
 @-webkit-keyframes fade-in {
@@ -223,8 +227,8 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
   }
 }
 .fade-in {
-  -webkit-animation: fade-in 700ms ease-in-out forwards;
-          animation: fade-in 700ms ease-in-out forwards;
+  -webkit-animation: fade-in 500ms ease-in-out forwards;
+          animation: fade-in 500ms ease-in-out forwards;
 }
 
 @-webkit-keyframes fade-out {

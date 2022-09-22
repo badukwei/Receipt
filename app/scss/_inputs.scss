@@ -2,49 +2,50 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
     font-size: 0.75em;
     color: $lightGrayishCyan;
     top: -5px;
-    -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
-
-//什麼意思?
 
 #add-items {
     padding: 0px;
 }
 
 .add-container {
-    display: flex;
     justify-content: center;
+    padding-top: 10px;
 
     .styled-input {
-        margin: 20px 10px;
+        margin: 20px 0px 0px 0px;
+        padding: 0px 10px;
         position: relative;
         border-radius: 4px;
     
         label {
-            color: $lightGrayishCyan;
+            color: $grayishBlue;
             padding: 1.3rem 30px 1rem 30px;
             position: absolute;
             top: 0px;
-            left: -16px;
+            left: -5px;
             transition: all 0.25s ease;
             pointer-events: none;
         }
 
         //opacity transition
-    
         input {
         text-align: center;
         padding: 20px;
         border: 0;
+        border-left: solid $grayishBlue;
         font-size: 1rem;
-        background-color: $desaturatedDarkCyan;
-        color: $lightGrayishCyan;
+        background-color: $lightGrayishBlue;
+        color: $veryDarkGrayish;
         border-radius: 4px;
+        width: 100%;
         }
     
-        input:focus,
-        textarea:focus { outline: 0; }
+        input:focus {
+            outline: 0; 
+        }
+
     }
 
     .add-button {
@@ -52,7 +53,10 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
         color: $lightGrayishCyan;
         background-color: $grayishBlue;
         font-weight: 300;
-        font-size: 1rem;
+        font-size: 0.8rem;
+        padding: 3px;
+        width: 20%;
+        margin-bottom: 10px;
     }
 }
 

@@ -13,17 +13,16 @@ body {
         box-shadow: $desaturatedDarkCyan 0px 11px 25px -10px;  
         text-align: center;
         font-size: $font-med;
-        font-weight: 500;
-        color: veryDarkGrayish;
+        font-weight: 700;
+        color: $veryDarkGrayish;
     }
+}
 
 .container {
-    display: block;
     margin: 100px auto;
     width: 70%;
 
     .item {
-        display: block;
         position: relative;
         background: $white;
         margin: 20px auto;
@@ -31,15 +30,13 @@ body {
         border-radius: 5px;
         box-shadow: $desaturatedDarkCyan 0px 8px 15px -10px;  
         
-        .infoWrap {
+        .info-wrap {
             display: flex;
             justify-content: space-between;
 
             .info {
-                vertical-align: middle;    
-                
-                .itemNumber {
-                    display: block;
+
+                .item-number {
                     margin-top: 0px;
                     margin-left: 6px;
                     margin-bottom: 0px;
@@ -48,39 +45,35 @@ body {
                     opacity: 0.5;
                 }
             
-                .itemName {
-                    display: block;
+                .item-name {
                     margin-top: 0px;
                     margin-left: 6px;
                     margin-bottom: 0px;
                     font-size: 28px;
+                    font-weight: 500;
                     color: $desaturatedDarkCyan;
                     
                 }           
             }
 
             .total-price {
-                vertical-align: middle;
-                text-align: center;
                 font-size: $font-sm;
                 position: absolute;
                 right: 16px;
                 bottom: 0px;
             }
 
-            .removeWrap {
-                vertical-align: middle;
+            .remove-wrap {
+                margin-top: -2px;
 
                 .delete {
-                    text-decoration: none;
-                    font-family: "Montserrat", sans-serif;
-                    color: #ffffff;
+                    color: $lightGrayishCyan;
                     font-weight: bold;
                     background: $grayishBlue;
-                    padding: 0.5em 0.7em;
+                    padding: 0.5em 0.58em 0.58em ;
                     font-size: 0.75em;
                     border-radius: 100%;
-                    line-height: 0.8;
+                    line-height: 0.7;
                     border: none;
                 }
             }
@@ -88,5 +81,5 @@ body {
     }
 }
 
-}
+//To improve: Less html tags and reduce useless attribute 
 
