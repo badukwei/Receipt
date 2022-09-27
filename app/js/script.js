@@ -81,10 +81,10 @@ const addItem = function() {
   }, 500);
  
   //defaults
-  idInput.value = "";   
-  nameInput.value = "";
-  amountInput.value = "";
-  priceInput.value = "";
+  idInput.value = ''; 
+  nameInput.value = '';
+  amountInput.value = '';
+  priceInput.value = '';
 }
 addButton.addEventListener("click", addItem);
 
