@@ -158,7 +158,6 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 }
 
 .add-container {
-  justify-content: center;
   padding-top: 10px;
 }
 .add-container .styled-input {

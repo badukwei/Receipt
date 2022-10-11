@@ -1,7 +1,5 @@
-//To do : animation of removing and price change
-//Bug : if I don't put the item name price will cover the remove bottun
+//reduce the code with functions
 //To fix : 自動進位
-//To fix : defaults of input 
 
 let idInput = document.getElementById("newId");
 let nameInput = document.getElementById("newName");
@@ -45,11 +43,22 @@ const createNewItemElement = function(number, name, amount, price) {
   removeWrap.className = "remove-wrap";
   deleteButton.classList.add("delete", "click-button");
  
-
   //innertext
-  itemNumber.innerText = "#" + number;
-  itemName.innerText = name;
-  priceOutput.innerText = parseFloat(amount) * parseFloat(price);
+  if(number) {
+    itemNumber.innerText = "#" + number;
+  } else {
+    itemNumber.innerText = "#000000"
+  };
+  if(name) {
+    return itemName.innerText = name;
+  } else {
+    itemName.innerText = "none";  
+  };
+  if(amount && price) {
+    priceOutput.innerText = parseFloat(amount) * parseFloat(price);
+  } else {
+    priceOutput.innerText = 0
+  };
   totalPrice.innerText = "$";
   deleteButton.innerText = "x";
 
@@ -65,6 +74,57 @@ const createNewItemElement = function(number, name, amount, price) {
 
   console.log(item);
   return item;
+}
+
+//Sum the price
+let countPrice = function() {
+  console.log('Counting the price');
+  subTotal.innerHTML = 0;
+  let priceOutputSum = itemsHolder.querySelectorAll('.price-output');
+  for(let i = 0; i < priceOutputSum.length; i++) {
+      subTotal.innerHTML = (parseFloat(priceOutputSum[i].innerHTML) + parseFloat(subTotal.innerHTML)).toFixed(0)
+  }
+  console.log(subTotal.innerHTML)
+  tips.innerHTML = (parseFloat(subTotal.innerHTML) * 0.1).toFixed(0);
+  total.innerHTML = (parseFloat(subTotal.innerHTML) + parseFloat(tips.innerHTML)).toFixed(0);
+  subTotal.classList.add("fade-in");
+  tips.classList.add("fade-in");
+  total.classList.add("fade-in");
+  setTimeout(function(){
+    subTotal.classList.remove('fade-in');
+    tips.classList.remove("fade-in");
+    total.classList.remove("fade-in");
+  }, 700)
+} 
+countPrice();
+
+//delete items
+let deleteItem = function() {
+  console.log("Delete task...");
+  let listItem = this.parentNode.parentNode.parentNode;
+  //subTotal.classList.add("fade-in");
+  //tips.classList.add("fade-in");
+  //total.classList.add("fade-in"); 
+  listItem.classList.add("fade-out"); 
+  setTimeout(() => {
+    listItem.remove();
+    countPrice();
+  }, 500);     
+}
+
+let bindItemEvents = function(listItem) {
+  console.log("Bind list item events");
+  //select listItem's children
+  let deleteButton = listItem.querySelector(".delete");
+  let price = listItem.querySelector(".price-output").innerText;
+  console.log(price);
+  //bind deleteItem to delete button
+  deleteButton.onclick = deleteItem;
+}
+
+for(let i = 0; i < itemsHolder.children.length; i++) {
+  //bind events to list item's children
+  bindItemEvents(itemsHolder.children[i]);
 }
 
 //add items
@@ -87,53 +147,3 @@ const addItem = function() {
   priceInput.value = '';
 }
 addButton.addEventListener("click", addItem);
-
-//delete items
-let deleteItem = function() {
-    console.log("Delete task...");
-    let listItem = this.parentNode.parentNode.parentNode;
-    //subTotal.classList.add("fade-in");
-    //tips.classList.add("fade-in");
-    //total.classList.add("fade-in"); 
-    listItem.classList.add("fade-out"); 
-    setTimeout(() => {
-      listItem.remove();
-      countPrice();
-    }, 500);     
-}
-
-let bindItemEvents = function(listItem) {
-  console.log("Bind list item events");
-  //select listItem's children
-  let deleteButton = listItem.querySelector(".delete");
-  let price = listItem.querySelector(".price-output").innerText;
-  console.log(price);
-  //bind deleteItem to delete button
-  deleteButton.onclick = deleteItem;
-}
-
-for(let i = 0; i < itemsHolder.children.length; i++) {
-  //bind events to list item's children
-  bindItemEvents(itemsHolder.children[i]);
-}
-
-//Sum the price
-let countPrice = function() {
-  console.log('Counting the price');
-  subTotal.innerHTML = 0;
-  let priceOutputSum = itemsHolder.querySelectorAll('.price-output');
-  for(let i = 0; i < priceOutputSum.length; i++) {
-      subTotal.innerHTML = (parseFloat(priceOutputSum[i].innerHTML) + parseFloat(subTotal.innerHTML)).toFixed(2)
-  }
-  tips.innerHTML = (parseFloat(subTotal.innerHTML) * 0.1).toFixed(2);
-  total.innerHTML = (parseFloat(subTotal.innerHTML) + parseFloat(tips.innerHTML)).toFixed(2);
-  subTotal.classList.add("fade-in");
-  tips.classList.add("fade-in");
-  total.classList.add("fade-in");
-  setTimeout(function(){
-    subTotal.classList.remove('fade-in');
-    tips.classList.remove("fade-in");
-    total.classList.remove("fade-in");
-  }, 700)
-} 
-countPrice();
